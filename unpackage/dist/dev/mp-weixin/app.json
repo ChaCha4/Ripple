@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/homePage/index",
+    "pages/newRipple/index"
   ],
+  "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
