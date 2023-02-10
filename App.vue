@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
-	@import "uni_modules/uview-ui/index.scss";
+	@import 'uview-ui/theme.scss';
 	// 引入字体样式文件
 	@import url('./static/fonts/iconfont/iconfont.css');
 	/*每个页面公共css */

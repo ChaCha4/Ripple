@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 884655 */
-  src: url('~@/static/fonts/iconfont/iconfont.woff2?t=1675911375405') format('woff2'),
-       url('~@/static/fonts/iconfont/iconfont.woff?t=1675911375405') format('woff'),
-       url('~@/static/fonts/iconfont/iconfont.ttf?t=1675911375405') format('truetype');
+  src: url('~@/static/fonts/iconfont/iconfont.woff2?t=1676007655127') format('woff2'),
+       url('~@/static/fonts/iconfont/iconfont.woff?t=1676007655127') format('woff'),
+       url('~@/static/fonts/iconfont/iconfont.ttf?t=1676007655127') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,106 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-biaoqiankuozhan_yuedu-119:before {
+  content: "\eaef";
+}
+
+.icon-biaoqiankuozhan_kecheng-136:before {
+  content: "\eb00";
+}
+
+.icon-biaoqiankuozhan_xiuxian-219:before {
+  content: "\eb55";
+}
+
+.icon-gouwu:before {
+  content: "\f1cd";
+}
+
+.icon-youxi:before {
+  content: "\f1d3";
+}
+
+.icon-yinle:before {
+  content: "\f1da";
+}
+
+.icon-shipin:before {
+  content: "\f1dd";
+}
+
+.icon-liwu:before {
+  content: "\f1de";
+}
+
+.icon-qishifengcai:before {
+  content: "\fd56";
+}
+
+.icon-wangyoubaoliao:before {
+  content: "\fd59";
+}
+
+.icon-xiuxianyule:before {
+  content: "\fd6a";
+}
+
+.icon-peixun:before {
+  content: "\fd6e";
+}
+
+.icon-mianshihuntun:before {
+  content: "\fd77";
+}
+
+.icon-naichaxiaochi:before {
+  content: "\fd78";
+}
+
+.icon-jiancansushi:before {
+  content: "\fd7d";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_menpiao:before {
+  content: "\e608";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_fumu:before {
+  content: "\e609";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_qiyefuwu:before {
+  content: "\e60a";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_dujia:before {
+  content: "\e60b";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_qinzi:before {
+  content: "\e60c";
+}
+
+.icon-a-changyonglvyouyewutubiao_fuzhi_tiyan:before {
+  content: "\e60f";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_louying:before {
+  content: "\e610";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_youxue:before {
+  content: "\e611";
+}
+
+.icon-changyonglvyouyewutubiao_fuzhi_jiating:before {
+  content: "\e612";
+}
+
+.icon-wodezixun:before {
+  content: "\e645";
 }
 
 .icon-shouyetianchong:before {

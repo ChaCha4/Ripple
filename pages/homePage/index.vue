@@ -1,6 +1,10 @@
 <template>
 		<MenuLayout>
-			<div class="add-btn">新建涟漪</div>
+			<div v-if="list.length <= 0" class="empty-style">暂无内容</div>
+			<div v-else>
+				
+			</div>
+			<div class="add-btn" @tap="addNewRipple">新建涟漪</div>
 		</MenuLayout>
 </template>
 
@@ -9,16 +13,35 @@
 	export default {
 		data() {
 			return {
-				
+				list: this.$store.state.rippleList
 			}
+		},
+		created() {
+			console.log(this.$store);
 		},
 		components: {
 			MenuLayout
+		},
+		methods: {
+			addNewRipple() {
+				console.log(123456);
+				uni.navigateTo({
+					url: '/pages/newRipple/index'
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="less" scoped>
+	.empty-style {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		color: #98ad90;
+	}
+	
 	.add-btn {
 		position: absolute;
 		bottom: 12vh;

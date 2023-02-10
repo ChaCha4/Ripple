@@ -1,1 +1,1 @@
-<menu-layout vue-id="08843a7c-1" class="data-v-0ff7806c" bind:__l="__l" vue-slots="{{['default']}}"><view class="add-btn _div data-v-0ff7806c">新建涟漪</view></menu-layout>
+<menu-layout vue-id="08843a7c-1" class="data-v-0ff7806c" bind:__l="__l" vue-slots="{{['default']}}"><block wx:if="{{$root.g0<=0}}"><view class="empty-style _div data-v-0ff7806c">暂无内容</view></block><block wx:else><view class="_div data-v-0ff7806c"></view></block><view data-event-opts="{{[['tap',[['addNewRipple',['$event']]]]]}}" class="add-btn _div data-v-0ff7806c" bindtap="__e">新建涟漪</view></menu-layout>

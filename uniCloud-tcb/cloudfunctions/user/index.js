@@ -6,7 +6,7 @@ const db = uniCloud.database();
 const user = db.collection('user')
 exports.main = async (event, context) => {
 	//event为客户端上传的参数
-	console.log('event : ', event)
+	// console.log('event : ', event)
 	const {
 		code,
 		avatarUrl,
@@ -34,7 +34,6 @@ exports.main = async (event, context) => {
 		openid
 	}
 	const resData = await db.collection('user').add(userData)
-	console.log(resData, 'resData')
 	// console.log(countRes, 'countRes');
 	// if (countRes.total !== 1) {
 	// 	user.add({

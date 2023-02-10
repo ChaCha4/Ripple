@@ -33,10 +33,9 @@
 							screenHeight,
 							uniPlatform
 						} = info
-						console.log(uniPlatform, 'info');
+						console.log(windowHeight, screenHeight, 'info');
 						if (uniPlatform === 'web') {
 							navH = screenHeight - windowHeight + 55
-							console.log(screenHeight - windowHeight, 'navH');
 						} else {
 							navH = screenHeight - windowHeight
 						}
@@ -51,7 +50,6 @@
 				uni.getUserProfile({
 					desc: '获取你的昵称，头像，地区及性比',
 					success: res => {
-						console.log('所有', res);
 						uni.login({
 							provider: 'weixin',
 							success: function(loginRes) {
@@ -60,7 +58,6 @@
 									gender,
 									nickName
 								} = res.userInfo
-								console.log('loginRes.authResult', loginRes);
 								// 在这个地方普通开发中就应该去调用后端给的api进行登录操作了
 								// 现在这个地方我们需要换成云函数进行相关操作
 								uniCloud.callFunction({
@@ -72,7 +69,7 @@
 										nickName
 									}
 								}).then(result => {
-									console.log(result, 'result')
+									// console.log(result, 'result')
 								})
 							}
 						});

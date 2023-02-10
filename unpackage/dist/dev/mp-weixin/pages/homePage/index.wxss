@@ -1,3 +1,10 @@
+.empty-style.data-v-0ff7806c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #98ad90;
+}
 .add-btn.data-v-0ff7806c {
   position: absolute;
   bottom: 12vh;
