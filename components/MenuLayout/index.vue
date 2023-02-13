@@ -31,9 +31,10 @@
 						const {
 							windowHeight,
 							screenHeight,
+							statusBarHeight,
 							uniPlatform
 						} = info
-						console.log(windowHeight, screenHeight, 'info');
+						console.log({windowHeight, screenHeight, info});
 						if (uniPlatform === 'web') {
 							navH = screenHeight - windowHeight + 55
 						} else {
@@ -86,7 +87,8 @@
 <style lang="scss" scoped>
 	.content {
 		width: 100%;
-		
+		height: 100vh;
+		overflow: hidden;
 
 		.main-contain {
 			background-color: #F7F8F3;

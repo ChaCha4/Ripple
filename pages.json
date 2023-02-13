@@ -6,12 +6,14 @@
 		{
 			"path": "pages/homePage/index",
 			"style": {
-				"navigationBarTitleText": "小涟漪"
+				"navigationBarTitleText": "小涟漪",
+				"disableScroll": true
 			}
 		},{
 			"path": "pages/newRipple/index",
 			"style": {
-				"navigationBarTitleText": "新建涟漪"
+				"navigationBarTitleText": "新建涟漪",
+				"disableScroll": true
 			}
 		}
 	],

@@ -15,21 +15,22 @@
 				</span>
 			</div>
 			<hr style="border-color: rgba(0, 0, 0, 0.1);">
-			<u-form-item prop="timePicker">
+			<u-form-item prop="endTime">
 				<div class="time-picker-box">
 					<div class="text">设置涟漪结束时间</div>
 
 					<div class="value-box" @tap="show = true">
-						<span>{{form.timePicker}}</span>
+						<span>{{form.endTime}}</span>
 						<i class="iconfont icon-xiangyou1" />
 					</div>
 				</div>
 			</u-form-item>
 			<hr style="border-color: rgba(0, 0, 0, 0.1);">
 		</u-form>
-		<div :class="{ 'save-btn': true, 'diabled-status': !form.name || form.timePicker === '请选择' }" @click="submit">保存</div>
+		<div :class="{ 'save-btn': true, 'diabled-status': !form.name || form.endTime === '请选择' }" @click="submit">保存
+		</div>
 		<u-calendar :show="show" mode="single" @close="show = false" @confirm="confirm"></u-calendar>
-
+		<u-toast ref="uToast"></u-toast>
 	</div>
 </template>
 
@@ -43,7 +44,12 @@
 				form: {
 					icon: 'biaoqiankuozhan_yuedu-119',
 					name: '',
-					timePicker: '请选择'
+					endTime: '请选择',
+					startTime: this.formatDate(),
+					days: 0,
+					checked: false,
+					space: []
+
 				},
 				show: false,
 				iconList,
@@ -54,7 +60,7 @@
 					// 	message: '请填写名称',
 					// 	trigger: ['blur', 'change']
 					// },
-					// 'timePicker': {
+					// 'endTime': {
 					// 	type: 'string',
 					// 	required: true,
 					// 	message: '请设置时间',
@@ -64,14 +70,46 @@
 			}
 		},
 		methods: {
+			// 时间戳的处理
+			formatDate: function() {
+				const date = new Date();
+				const month = date.getMonth() + 1
+
+				return `${date.getFullYear()}-${month}-${date.getDate()}`
+			},
+			addNewRipple() {
+				uniCloud.callFunction({
+					name: 'rippleList',
+					data: {
+						type: 'add',
+						rippleInfo: this.form
+					}
+				}).then(({
+					result
+				}) => {
+					if (result.code === 200) {
+
+						this.$refs.uToast.show({
+							type: 'default',
+							message: '新建成功',
+							complete() {
+								uni.reLaunch({
+									url: '/pages/homePage/index'
+								})
+							}
+						})
+					}
+				})
+			},
 			submit() {
-				if (!this.form.name || this.form.timePicker === '请选择') return null
-				console.log(this.form, 'this.form');
+				if (!this.form.name || this.form.endTime === '请选择') return null
+
+				this.addNewRipple()
 			},
 			confirm(info) {
-				this.form.timePicker = info[0]
+				this.form.endTime = info[0]
 				this.show = false
-			}
+			},
 		}
 	}
 </script>
