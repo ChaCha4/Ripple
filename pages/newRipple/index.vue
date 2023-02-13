@@ -2,7 +2,7 @@
 	<div class="content">
 		<u-form :model="form" ref="uForm" :rules="rules">
 			<u-form-item>
-				<span class="icon-box"><i :class="`iconfont icon-${form.icon}`" /></span>
+				<span class="icon-box"><i :class="['iconfont', `icon-${form.icon}`]" /></span>
 			</u-form-item>
 			<u-form-item prop="name">
 				<u-input border="surround" shape="circle" v-model="form.name" placeholder="请输入名称"></u-input>
@@ -11,7 +11,7 @@
 				<span class="block-title">请选择图标</span>
 				<span class="icon-list-box">
 					<span v-for="(item) in iconList" :key="item.icon" class="icon-item"><i
-							:class="`iconfont icon-${item.icon}`" @tap="form.icon = item.icon" /></span>
+							:class="['iconfont', `icon-${item.icon}`]" @tap="form.icon = item.icon" /></span>
 				</span>
 			</div>
 			<hr style="border-color: rgba(0, 0, 0, 0.1);">
@@ -129,7 +129,10 @@
 			color: #727272;
 
 			.value-box {
-				flex-shrink: 0;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: 50%;
 				cursor: pointer;
 			}
 		}

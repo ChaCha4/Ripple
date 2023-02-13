@@ -70,7 +70,10 @@
   color: #727272;
 }
 .content .time-picker-box .value-box.data-v-1830c50a {
-  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
   cursor: pointer;
 }
 .content .save-btn.data-v-1830c50a {
