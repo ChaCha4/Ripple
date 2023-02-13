@@ -1,5 +1,5 @@
 # 此为注释-将被Git忽略
 *.a # 忽略所有.a结尾的文件
-./unpackage  # 忽略打包文件
-./node_modules # 忽略依赖安装目录
+/unpackage/  # 忽略打包文件
+/node_modules/ # 忽略依赖安装目录
 .hbuilderx
