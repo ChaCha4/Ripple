@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "小涟漪",
-  "usingComponents": {
-    "menu-layout": "/components/MenuLayout/index"
-  }
-}
