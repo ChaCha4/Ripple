@@ -15,7 +15,7 @@
 						@click="() => handleChecked(item._id)">打卡</span>
 					<span v-else class="operation-box">
 						<i class="iconfont icon-duigoutianchong-" />
-						<span class="space-btn">记录心情</span>
+						<!-- <span class="space-btn" @tap="onClickRecordSpace">记录心情</span> -->
 					</span>
 				</div>
 			</div>
@@ -82,6 +82,11 @@
 				const totalDays = (new Date(endTime).getTime() - new Date(startTime).getTime()) / 1000 / 60 / 60 / 24
 
 				return Math.floor((days / totalDays) * 100)
+			},
+			onClickRecordSpace() {
+				uni.navigateTo({
+					url: '/pages/emotionSpace/index'
+				})
 			}
 		}
 	}
@@ -163,7 +168,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 40px;
+				width: 62px;
 				height: 22px;
 				margin-top: 8px;
 				font-size: 12px;
@@ -178,6 +183,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-around;
+				width: 62px;
 				height: 100%;
 
 				.iconfont {
@@ -189,7 +195,7 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 62px;
+					width: 100%;
 					height: 20px;
 					font-size: 12px;
 					cursor: pointer;

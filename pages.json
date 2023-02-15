@@ -15,6 +15,12 @@
 				"navigationBarTitleText": "新建涟漪",
 				"disableScroll": true
 			}
+		},{
+			"path": "pages/emotionSpace/index",
+			"style": {
+				"navigationBarTitleText": "记录心情",
+				"disableScroll": true
+			}
 		}
 	],
 	"globalStyle": {
