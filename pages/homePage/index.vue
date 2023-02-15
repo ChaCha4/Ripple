@@ -15,7 +15,7 @@
 						@click="() => handleChecked(item._id)">打卡</span>
 					<span v-else class="operation-box">
 						<i class="iconfont icon-duigoutianchong-" />
-						<!-- <span class="space-btn" @tap="onClickRecordSpace">记录心情</span> -->
+						<span class="space-btn" @tap="onClickRecordSpace">记录心情</span>
 					</span>
 				</div>
 			</div>
