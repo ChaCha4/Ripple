@@ -15,7 +15,6 @@
 						@click="() => handleChecked(item._id)">打卡</span>
 					<span v-else class="operation-box">
 						<i class="iconfont icon-duigoutianchong-" />
-						<span class="space-btn">记录心情</span>
 					</span>
 				</div>
 			</div>
@@ -79,8 +78,9 @@
 				})
 			},
 			handleWidth(days, startTime, endTime) {
-				const totalDays = (new Date(endTime).getTime() - new Date(startTime).getTime()) / 1000 / 60 / 60 / 24
+				const totalDays = (new Date(endTime.replace(/-/g, '/')).getTime() - new Date(startTime.replace(/-/g, '/')).getTime()) / 1000 / 60 / 60 / 24
 
+console.log(days, startTime, endTime, totalDays);
 				return Math.floor((days / totalDays) * 100)
 			}
 		}
@@ -163,7 +163,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 40px;
+				width: 62px;
 				height: 22px;
 				margin-top: 8px;
 				font-size: 12px;
@@ -178,24 +178,12 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-around;
+				width: 62px;
 				height: 100%;
 
 				.iconfont {
 					font-size: 26px;
 					color: #7BAF90;
-				}
-
-				.space-btn {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 62px;
-					height: 20px;
-					font-size: 12px;
-					cursor: pointer;
-					color: #fff;
-					background-color: #C27777;
-					border-radius: 14px;
 				}
 			}
 		}
